@@ -24,7 +24,7 @@ def transactions_history(address: str, chain: str, asset: str, limit:int = 25, b
         'limit': limit,
     }
     if block_created_at_before:
-        params['block_created_at_before'] = block_created_at
+        params['block_created_at_before'] = block_created_at_before
 
     url = f"https://api.trustwallet.com/v2/chains/{chain}/transactions"
     response = httpx.get(url, params=params)

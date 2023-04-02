@@ -42,3 +42,6 @@ def search_asset(query: str, limit: int = 30, offset: int = 0) -> dict:
     }
     response = httpx.get('https://api.trustwallet.com/v1/search/assets', params=params)
     return response.json()
+
+
+
